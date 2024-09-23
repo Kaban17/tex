@@ -1,0 +1,34 @@
+\input{preambula.tex}
+\begin{document}
+	\section{}
+	\subsection*{a)}
+	$$f = \arctg{\frac{u}{v}}$$
+	$$df = d(\arctan{\frac{u}{v}}) = \frac{1}{1+\frac{u}{v}^2}\cdot\frac{du\cdot v-u\cdot dv}{v^2}$$
+	\subsection*{b)}
+	$$f = \frac{1}{u^2+v^2}$$
+	$$df = d(\frac{1}{\sqrt{u^2+v^2}}) = -\frac{d(v^2+u^2)}{2(u^2+v^2)\sqrt{u^2+v^2}}$$
+	\section{}
+	\subsection*{a)}
+	$$\cos{(ax+b)}^{(n)} = a^n\cos{(ax+b+\frac{\pi}{2}n)}$$
+	$n=1$: $-a\sin(ax+b) = \cos(ax+b+\frac{\pi}{2})$  \\
+	$\sqsupset P_n - $ верно, тогда верно и $P_{n+1}$ \\
+	$P_{n+1}: \left(\cos{ax+b}\right)^{n+1} = \left(\cos{(ax+b)}^{(n)}\right)^{'} = \left(a^n\cos{(ax+b+\frac{\pi}{2}n)}\right)^{'}=-a^{n+1}\sin{\left(ax+b+\frac{\pi}{2}n\right)}=a^{n+1}\cos{\left(ax+b+\frac{\pi}{2}(n+1)\right)}$
+	\subsection*{b)}
+	$$(\ln(ax+b))^{(n)} =\frac{(-1)^{n+1}(n-1)!a^n}{(ax+b)^n} $$
+	$n=1: (\ln(ax+b))^{'} = \frac{a}{ax+b}$ \\
+	$\sqsupset P_n \text{верно, тогда верно и } P_{n+1}	$
+	$ (\ln(ax+b))^{n+1} = ((\ln{ax+b})^{n})^{'} = (\frac{(-1)^{n-1}(n-1)!a^{n}}{(ax+b)^n})^{'} = \frac{-(-1)^{n-1}(n-1)!a^n\cdot a\cdot n\cdot(ax+b)^n-1}{(ax+b)^2n} = \frac{(-1)^n\cdot n! \cdot a^{n+1}}{(ax+b)^{n+1}}$
+	\section{}
+	\subsection*{a)}
+	$$\frac{x-13}{x^2-x-6} = \frac{3}{x+2}+\frac{-2}{x-3}$$
+	$(\frac{3}{x+2}+\frac{-2}{x-3})^{(n)} =(\frac{3}{x+2})^{(n)} + (\frac{-2}{x-3})^{(n)} =  \frac{3\cdot(-1)^n\cdot n!}{(x+2)^n} -\frac{2\cdot(-1)^n\cdot n! \cdot2}{(x-3)^n} $
+	\subsection*{b)}
+	$$f(x) = (x^2+x+1)e^{-3x}$$
+	\subsection*{c)}
+	$$\cos^2(5x) = \frac{1+\cos10x}{2}$$
+	$$\sin(3x)\cdot(\frac{1+\cos10x}{2}) = \frac{\sin{3x}+\cos(10x)\cdot\sin(3x)}{2} = \frac{\sin3x+\sin(13x)/2-\sin(7x)/2}{2}$$
+	$$f^{(n)} = \frac{3^n\cdot\sin{(3x+\frac{\pi n}{2})}}{2} + \frac{13^n\cdot\sin{(13x+\frac{\pi n}{2})}}{4}- \frac{7^n\cdot\sin{(7x+\frac{\pi n}{2})}}{4}$$
+	\section{}
+	\subsection*{a)}
+	$$\lim_{x\to 0}\frac{\arcsin{2x}-2\arcsin(x)}{x^3} = \frac{\frac{2\sqrt{1-x^2}-2\sqrt{1-4x^2}}{3x^2\sqrt{1-5x^2+4x^4}}}{}$$ = $$\lim_{x\to0}\frac{-2x\sqrt{1-4x^2} +8\sqrt{1-x^2}}{\sqrt{(1-x^2)(1-4x^2)\sqrt{4x^4-5x^2+1}}\cdot(48x^5\cdot45x^4+6)} = 1$$
+\end{document}

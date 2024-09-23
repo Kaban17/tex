@@ -1,0 +1,40 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	$$x^2 = 2\lambda y, y^2 = 2\lambda x $$
+	$$S_{\text{фигуры}} = \int_0^{2\lambda}= \sqrt{2\lambda x}- \frac{x^2}{2\lambda}\dx = \frac{\lambda^2y}{3}$$
+	\section*{2}
+	$$r^2 = 2\lambda \cos{2\varphi}$$
+	$$S_{\text{фигруы}} = 4\cdot\frac12\int_0^{\frac{\pi}{4}}2\lambda\cos2\varphi\dx = 2\lambda$$
+	\section*{3}
+	$$x^2+y^2 = a^2$$
+	$$f(\varphi) = a$$
+	$$L_{\text{длина кривой в пол.координтах}}= \int_0^{2\pi}a \text{d}\varphi = 2a\pi$$
+	\section*{4}
+	$$x(t) = a\cos t$$
+	$$y(t) = a\sin t$$
+	$$z(t) = 7at$$
+	$$L_{\text{линии}} = \int_0^{2\pi}\sqrt{a^2\sin^2t + a^2\cos^2t + 49a^2}\d{dt} = \int_0^{2\pi}\sqrt{a^2 50} dt = 2\pi\sqrt{50}a$$
+	\section*{5}
+	$$y= \sqrt{x}e^{-x}$$
+	$$V = \pi\int_0^7x\cdot e^{-2x}\dx = \pi\left(x\cdot\frac{e^{-2x}}{2}|_0^7 + \frac12\int_0^7 e^{-2x} dx\right) = \frac{\pi}{4}- \frac{15\pi}{4e^14}$$
+	\section*{7}
+	$$y = \sqrt{2ax}, x\in \left[0,3\right]$$
+	$$\sqrt{2ax}\cdot\sqrt{1+\frac{2ax}{2x}} = \sqrt{a}\sqrt{2x+a}$$
+	$$2\pi \sqrt{a}int_0^3 \sqrt{2x+a}\dx = \frac{(2x+a)^{3/2}}{3}|_0^3\cdot2\pi\sqrt{a}$$
+	\section*{8}
+	$$x^2+y^2+z^2 = a^2$$
+	Шар является телом вращения полуокружности $y = \sqrt{a^2-x^2}$
+	$$y = asint$$
+	$$x = acost , t \in\left[0, \pi\right]$$
+	$$S_{\text{поверхноти}} = 2\pi a\int_0^{2\pi}\sin{t}\sqrt{a^2\sin{t}+a^2\cos{t}}\d{dt} = 4\pi a^2$$
+	\section*{9}
+	$$y = \sqrt{a^2-x^2}$$
+	$$x_c = 0 \text{ , т.к фигура симметрична относительно относительно } y= 0$$
+	$$y_c = \frac{\int_0^a a\dx}{a\int_0^a\frac{1}{\sqrt{a^2-x^2}}\dx} = \frac{2a}{\pi}$$
+	\section*{10}
+	$$y^2 = ax$$
+	$$x = a$$
+	$$y_c = 0, \text{ т.к график парабола и он симметричен относительно }x= 0$$
+	$$x_c = \frac{\int_0^a(\sqrt{ax}- a)\dx}{\int_0^a \sqrt{ax} - a\dx} = \frac{3a}{10}$$
+\end{document}

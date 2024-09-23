@@ -1,0 +1,156 @@
+\input{preambula.tex}
+\usepackage{tikz}
+\begin{document}
+	\section*{1}
+	Сначала найдем вектор нормали плоскости : $4x-3y+3z=-3$, $ n = (4, -3, 3)$\\
+	Теперь найдем вектор, перпендикулярный к вектору нормали : $d_x = 1, d_y = 1, d_z = \frac13$
+	Теперь направляющий вектор для искомой прямой будет равен : $$v = (-4.5+5, -8.75+13, -3.75+3 ) = (0.5, 4.25, -0.75) $$
+	$$\begin{cases}x = -5+0.5t\\
+		y =-13+ 4.25t\\
+		z = -3-0.75t
+	\end{cases}\text{ -  искомая прямая}$$
+	\section*{2}
+	\begin{tikzpicture}
+  % Coordinates
+\coordinate (A) at (0,0,0);
+\coordinate (B) at (5,0,0);
+\coordinate (C) at (5,5,0);
+\coordinate (D) at (0,5,0);
+\coordinate (A') at (0,0,5);
+\coordinate (B') at (5,0,5);
+\coordinate (C') at (5,5,5);
+\coordinate (D') at (0,5,5);
+
+% Front face
+\draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+% Back face
+\draw[thick] (A') -- (B') -- (C') -- (D') -- cycle;
+% Connecting edges
+\draw[thick] (A) -- (A');
+\draw[thick] (B) -- (B');
+\draw[thick] (C) -- (C');
+\draw[thick] (D) -- (D');
+
+% Vertex labels
+\node[below left] at (A) {A};
+\node[below right] at (B) {B};
+\node[above right] at (C) {C};
+\node[above left] at (D) {D};
+\node[below left] at (A') {A'};
+\node[below right] at (B') {B'};
+\node[above right] at (C') {C'};
+\node[above left] at (D') {D'};
+		 \coordinate (F) at (5,0,2.5); % Adjust this coordinate to place the point on the desired face and location
+		\draw[fill=red] (F) circle[radius=2pt]; % Draw a small circle to mark the point
+		\node[above right] at (F) {F}; % Label the point
+	  \coordinate (E) at (5,0,1); % Adjust this coordinate to place the point on the desired face and location
+	\draw[fill=blue] (E) circle[radius=2pt]; % Draw a small circle to mark the point
+	\node[above right] at (E) {E}; % Label the point
+	
+	% Draw line from A to E
+	\draw[thick] (A) -- (E);\\
+	\draw[thick] (D') -- (F);
+	\end{tikzpicture}
+	$$BE:EB' = 1:4$$
+	\subsection*{a)}
+	Пусть точка А имеет координаты $(0, 0, 0)$, $B = (10, 0, 0), C = (10,10, 0), D= (0, 10, 0)$ \\
+	$A'$ имеет координаты $(0, 0, 10)$, $B' = (10, 0, 10), C' = (10,10, 10), D'= (0, 10, 10)$\\
+	$$\overrightarrow{AE} = (10, 0, 2)$$
+	$$\overrightarrow{D'E} = (10, -10, -5)$$
+	$$\cos\varphi =\frac{ (\overrightarrow{AE},\overrightarrow{D'E} )}{|AE|\cdot |D'F|} = \frac{6}{\sqrt{104}}$$
+	$$\varphi = \arccos\frac{6}{\sqrt{104}} $$
+	\subsection*{b)}
+	Искомое расстояние - расстояние между скрещивающимися прямыми, которое можно найти по формулу
+	$$\rho(AE, D'F) = \frac{|ax_0+by_0+cz_0+d|}{\sqrt{a^2+b^2+c^2}}$$,
+	где $ax+by+cz+d=0$ - уравнение плоскости, параллельной первой прямой и в которой лежит вторая прямая. $(x_0, y_0, z_0) - \text{ - точка на первой прямой}$\\
+	Найдем эту плоскость.
+	$$\alpha \colon10x+2z = d$$
+	В точке D'
+	$$10\cdot0 + 2\cdot10=d = 20$$
+		$$\alpha \colon10x+2z = 20 - $$
+	$A = (0, 0,0) - $ точка на первой прямой.
+	 $$\rho(AE, D'F) =\frac{10}{\sqrt{26}}$$
+	 \section*{3)}
+	 $$A = \begin{pmatrix}
+	 	-7 & -11 & -7 \\
+	 	3 & 7 & 1\\
+	 	3 & 3 & 5
+	 \end{pmatrix}$$
+	 $$\mathcal{X}_A(\lambda) =\lambda^3 + 5\lambda^2-2\lambda-8 = -(\lambda-4)(\lambda-2)(\lambda+1) $$
+	 $$\begin{cases*}\lambda_1 = -1\\
+	 	\lambda_2 = 4\\
+	 	\lambda_3 = 2
+	 	\end{cases*}-\text{ собственные числа }$$
+	 	Теперь найдем собственные векторы, решив ОСЛУ для каждого собсвенного числа.\\
+	 	$$\lambda_1\colon\begin{pmatrix}
+	 		-6 & -11 & -7 \\
+	 		3 & 8 & 1 \\
+	 		3 & 3 & 6 
+	 	\end{pmatrix}\to \begin{pmatrix}
+	 	1 & 0 & 3 \\
+	 	0 & 1 & -1 \\
+	 	0 & 0 & 0
+	 	\end{pmatrix}, v_1 = \begin{pmatrix}
+	 	-3\\ 1 \\ 1
+	 	\end{pmatrix}$$
+	 		 	$$\lambda_2\colon\begin{pmatrix}
+	 		-11 & -11 & -7 \\
+	 		3 & 3 & 1 \\
+	 		3 & 3 & 1 
+	 	\end{pmatrix}\to \begin{pmatrix}
+	 		1 & 1 & 0 \\
+	 		0 & 0 & 1 \\
+	 		0 & 0 & 0
+	 	\end{pmatrix}, v_2 = \begin{pmatrix}
+	 		-1\\ 1 \\ 0
+	 	\end{pmatrix}$$
+	 		 	$$\lambda_3\colon\begin{pmatrix}
+	 		-6 & -11 & -7 \\
+	 		3 & 8 & 1 \\
+	 		3 & 3 & 6 
+	 	\end{pmatrix}\to \begin{pmatrix}
+	 		1 & 0 & 2 \\
+	 		0 & 1 & -1 \\
+	 		0 & 0 & 0
+	 	\end{pmatrix}, v_3 = \begin{pmatrix}
+	 		-2\\ 1 \\ 1
+	 	\end{pmatrix}$$
+	 	Каждый из собственных векторо ЛНЗ и встречается ровно один раз. Поэтому размерность каждого из собственныч подпространств имеет размерность один. 
+	 	Оператор $\varphi $ диагонализируем. 
+	 	$$diag = C^{-1}AC = \begin{pmatrix}
+	 			-1 & 0 & 0\\
+	 			0 & 2 & \\
+	 			0 & 0 & 4 
+	 	\end{pmatrix} - \text{где С - матрица перехода между исходным базисом и базисом,}$$
+	 	 составленным из собственных векторов. 
+	 	 \subsection*{b)}
+	 	 %{{-2, 1, 0}, {-8, 10, 4}, {12, -10, 4}}
+	 	 $$\begin{pmatrix}
+	 	 	-2 & 1 & 0 \\
+	 	 	-8 & 10 & 4 \\
+	 	 	12 & -10 & 4
+	 	 \end{pmatrix}$$
+	 	 %λ_3≈-1.07937
+	 	 $$\mathcal{X}_A(\lambda) =-\lambda^3 + 12 \lambda^2-60\lambda -80 = $$
+	 	 $$\lambda_1 = 2\left(2- \frac{1}{\sqrt[3]{\sqrt{145}-12}} + \sqrt[3]{\sqrt{145}-12}\right)$$
+	 	 Линейный оператор не диагонализируем. 
+	 	 \section*{4}
+	 	 $$Q(x) = \begin{pmatrix}
+	 	 	-3  & 2 & 1\\
+	 	 	2 & 0 & 2\\
+	 	 	1 & 2 & -3 
+	 	 \end{pmatrix}$$
+	 	 Выполним аналогичные действия и найдем собственные числа и вектора
+	 	 $$\lambda_1 = -4, \lambda_3 =2$$
+	 	 $$v_1  = (-1, 0, -1 ), v_2 = (-2, 1, 0), v_3 = (1, 2, 1)$$
+	 	 $$Q(x) = -4x^2_1-4x^2_2 + 2x^2_3  \text{ - канонический вид}$$
+	 	$$ \text{Ортогональное преобразованиe -}\colon \begin{pmatrix}
+	 		-\frac{1}{\sqrt2}& -\frac{2}{\sqrt3} & \frac12\\
+	 		0 & \frac{1}{\sqrt3} & 1\\
+	 		\frac{1}{\sqrt2}  & 0 & 1
+	 	\end{pmatrix}$$
+	 	\section*{5}
+	 	Найдем собственные значения и вектора для этого оператора. 
+	 	$$\lambda_1=1, v_1 = (1,1,5)$$
+	 	
+\end{document}

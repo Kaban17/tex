@@ -1,0 +1,29 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	$$x^2\equiv 2\pmod{143}$$
+	Чтобы это сравнение было разрешимо, необходимо и достаточно, чтобы  символ Якоби $\left(\frac{	2}{143}\right) = 1$ \\
+	$$\left(\frac{2}{143}\right) =\left(\frac{2}{13}\right)\cdot \left(\frac{2}{11}\right) = (-1)^{168/8}\cdot (-1)^{120/8} = 1   $$
+	\textbf{Ответ: } Сравнение разрешимо.
+	\section*{2}
+	Мы знаем, что: 
+	$$\sum\limits_{n=1}^{1000}\left(\frac{2n-1}{1001}\right) = 0$$
+	И еще мы знаем, что ровно половина чисел якоби равна $-1$. И поэтому $$\sum\limits_{n=1}^{500}\left(\frac{2n-1}{1001}\right) = 0$$
+	\textbf{Ответ :} $\sum\limits_{n=1}^{500}\left(\frac{2n-1}{1001}\right) = 0$
+	\section*{3}
+	Числа $2, 3, 6, 7,8 $ -ПК по модулю 11 \\
+	Числа $4, 5, 9, 10$ \\
+	$$4^5\equiv1 \pmod{11}$$
+	$$5^5 \equiv1 \pmod{11}$$
+	$$9^5\equiv 1\pmod{11}$$
+	$$10^2\equiv1\pmod{11}$$
+		\textbf{Ответ: } $2, 3, 6, 7,8 $ 
+	\section*{4}
+ $g$ - ПК по модую m. Пусть $g\equiv x^2\pmod{m}$\\
+ Тогда рассмотрим  $g^{\frac{\varphi(m)}{2}}$
+ $$g^{\frac{\varphi(m)}{2}} \equiv (x^2)^{\varphi(m)/2} \equiv x^{\varphi(m)} \equiv 1\pmod{m}\text{Теорема Эйлера}$$
+ Противоречие, так как $g $ - первообразный корень $\blacksquare$
+ \section*{5}
+  Пусть $g$ - ПК $\pmod{p}$, где $p $ простое
+ 	$$(p-1)! = \overbrace{1\cdot 2\cdot \dots \cdot(p-1)}^{\text{полная система вычетво}} \equiv \overbrace{g^1\cdot g^2\cdot \dots \cdot g^{(p-1)}}^{\text{тоже полная система вычетво}}\equiv g^{\frac{(p-1)(p-2)}{2}\cdot }\equiv 1^{(p-2)/2} \equiv1 \mod{p}\quad\blacksquare$$ 
+\end{document}		

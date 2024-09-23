@@ -1,0 +1,78 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{11}
+	\subsection*{Д11.1.}
+	\begin{tikzpicture}
+		% Вершины графа
+		\node[circle, draw] (B) at (0,0) {B};
+		\node[circle, draw] (A) at (0,-2) {A};
+		\node[circle, draw] (C) at (2,0) {C};
+		\node[circle, draw] (D) at (4,0) {D};
+		\node[circle, draw] (E) at (4,-2) {E};
+		\node[circle, draw] (F) at (2,-2) {F};
+		% Рёбра графа
+		\draw (B) -- (A);
+		\draw (C) -- (D);
+		\draw (E) -- (F);
+		\draw (E) -- (D);
+	\end{tikzpicture} \quad
+		\begin{tikzpicture}
+		% Вершины графа
+		\node[circle, draw] (B) at (0,0) {B};
+		\node[circle, draw] (A) at (0,-2) {A};
+		\node[circle, draw] (C) at (2,0) {C};
+		\node[circle, draw] (D) at (4,0) {D};
+		\node[circle, draw] (E) at (4,-2) {E};
+		\node[circle, draw] (F) at (2,-2) {F};
+		% Рёбра графа
+		\draw (B) -- (A);
+		\draw (C) -- (B);
+		\draw (E) -- (F);
+		\draw (E) -- (D);
+	\end{tikzpicture} \\
+	В лесу на 6 вершинах и 4 ребрах всегда будет 2 компоненты связности. Т.к. в дереве на n вершинах n-1 ребро, то лес на 6 вершинах получится из дерева на 5 ребрах и 6 вершинах удалением одного ребра, которое является мостом.
+	\subsection*{Д11.2.}
+	Путь является  сочетанием из $C_n^2\cdot2 = n^2-n$. Надо добавить еще пути единичнной длины, их ровно n штук. всего $n^2$ путей \\
+ 
+	\subsection*{Д11.3.}
+	Мы знаем, что количество ребер в два раза меньше, чем сумма степенй вершин. Значит, в этом графе 10 ребер. Мы знаем, что в дереве на n вершинах всегда n-1 ребро. Дерево на n ребрах всегда связывает большее количество вершин, чем недерево на n вершинах, т.к в дереве каждое ребро-мост. Значит искомый граф - дерево на 11 вершинах. 
+	Пример такого дерева:  \\
+
+	\begin{tikzpicture}
+		\node {Корень}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}}
+		child {node {$\circ$}};
+	
+	\end{tikzpicture}
+	\subsection*{Д11.4.}
+	\subsubsection*{a)}
+
+
+	\begin{tikzpicture}
+		\node {1}
+		child {node {2 }
+		 child {node {5 }}
+		 child {node {6 }}
+		 child {node {7 }}
+		 child {node {8 }}
+		 child {node {9 }}
+		 }
+		child {node {3 }
+		child {node {10 }}
+		child {node {11 }}
+		child {node {12 }}
+		child {node {13 }}	
+		}
+		child {node {4 }};
+	\end{tikzpicture}
+		\subsubsection*{b)}
+		В дереве на 13 вершинах 12 ребер. Значит сумма степененй вершин 24. Выкиным 2 ребра, сумма степеней, которых 6. Останется сумма степеней-12, 11 вершин. Среди этих вершин должна быть вершина четной степени, иначе будет нечетная сумма. Пусть это четное число = 4, тогда у нас останется 10 вершин с суммой 8. Такого быть не может, т.к граф связный 
+\end{document}

@@ -1,0 +1,34 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	\subsection*{a)}
+	$$f(x) = \begin{cases}\ln x, x \in (0,1] \\
+	0 , x = 0 \end{cases}\quad \text{интегрируема по Риману на отрезке } \left[0,1 \right] \text{ т.к функция ограничена на } $$ 
+	этом отрезке, и имеет всего одну точку разрыва. 
+	\subsection*{b)}
+	$$g(x) = \begin{cases}\left(1+\frac{1}{n}\right)^n, x \in \left(\frac{1}{2^n}, \frac{1}{2^{n-1}} \right] \\e, \quad x = 0\end{cases}$$
+	Эта функция интегрируема по Риману на отрезке $[0, 1]$ , т.к функция ограничена 	на этом отрезке (в силу ограниченности $\left(1+\frac{1}{n}\right)^n$) и имеет счетное число точек разрыва ( в каждой степени двойки и плюс одна точка разрыва в нуле.  )
+	\subsection*{c)}
+	$$h(x) = \begin{cases}1, x \in \left[0, 1\right]\cap \QQ \\
+	-1, x\in \left[0, 1\right]\backslash \QQ\end{cases} \text{Не интегрируема по Риману}$$
+	В каждой точке эта функция имеет разрыв. И следовательно , по \textbf{Факт 2}  она не интегрируема по Риману(так же, как и функция Дирихле).
+	\section*{2} 
+	\subsection*{a)}
+	$$\lim_{n\to\infty} \left\{\left(\frac{1}{\sqrt{4n^2-1^2}} + \frac{1}{\sqrt{4n^2-2^2}}+ \dots + \frac{1}{\sqrt{4n^2-n^2}}\right) = \frac1n\left(\frac{1}{4-1/n^2} + \dots + \frac{1}{4-n^2/n^2}\right)\right\} = (*)$$
+	Введем функцию $f(x) = (\sqrt{4-x^2})^{-1}$ и точками разбиения будут точки $x_k = \frac{k}{n}$
+	$$(*) = \sum_{k=1}^{n}f(\xi_k)(x_k-x_{k-1}) = \int^1_0 \frac{1}{\sqrt{4-x^2}}\dx = \arcsin(x/2)|^1_0 = \frac\pi6$$
+	\subsection*{b)}
+	\section*{3}
+		\subsection*{a)}
+	$$\int^e_1 \frac{\dx}{x\sqrt{1+\ln x}} = \begin{bmatrix}
+			l\ln x = t \\
+			\d{dt} = x^{-1}\dx \\
+	\end{bmatrix}  = \int^1_0\frac{\d{dt}}{\sqrt{1+t}} = 2\sqrt{1+t}\text{ \textbar}^1_0 = 2\sqrt2-2$$
+	\subsection*{b)}
+	Сначала вычислим неопределенный интеграл от это	 функции.
+	$$\int x\arctan x\dx = \frac{x^2}{2}\cdot \arctan x - \frac12\cdot\int\frac{x^2}{x^2+1} = \frac {x^2} {2}\cdot \arctan x - \frac12 (x+\arctan x)$$
+	$$\int\frac{x^2}{x^2+1} =x - \arctan x+C$$
+	$$\frac {x^2} {2}\cdot \arctan x - \frac12 (x+\arctan x)|^{\sqrt{3}}_0 = \frac{2\pi}{3}-\frac{\sqrt3}{2}$$
+		\subsection*{с)}
+		$$\int_{-\frac\pi3}^{\frac\pi3} \frac{2x^7-x^5+2x^3-1}{\cos^2x}\dx =\int_{-\frac\pi3}^{\frac\pi3} \frac{2x^7-x^5+2x^3}{\cos^2x} + \int_{-\frac\pi3}^{\frac\pi3} \frac{-1}{\cos^2x} = 0 - \int_{-\frac\pi3}^{\frac\pi3} \frac{1}{\cos^2x} = -\tg x|_{-\frac\pi3}^{\frac\pi3} = 2\sqrt3$$ 
+\end{document}

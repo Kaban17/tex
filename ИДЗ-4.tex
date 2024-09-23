@@ -1,0 +1,128 @@
+\input{preambula.tex}
+\begin{document}
+	\section{}
+	$$\begin{pmatrix}
+		-23-19i & -18-14i \\
+		27+21i & 22 +16i 
+	\end{pmatrix} - \begin{pmatrix}
+	x & 0 \\
+	0 & x
+	\end{pmatrix} = \begin{pmatrix}
+	-23-19i-x & -18-14i \\
+	27+21i & 22 +16i-x 
+	\end{pmatrix} = A $$
+	$$\nexists A^{-1}\iff det A = 0$$
+	$$det A = (-23-19i-x)(22+16i-x)+(27+21i)(18+14i) = x^2+x(1+3i)-10-30i = 0$$
+	$$D = (1+3i)^2 -4(-10-30i) 32 + 126i$$
+	$$\sqrt{D} = \sqrt{32+126i}$$
+	$$\frac{32+\sqrt{32^2+126^2}}{2} = 81$$
+	$$\pm\frac{126}{18} = \pm7$$
+	$$\sqrt{D} = \pm(9+7i)$$
+	$$x_1,x_2 = \frac{1-3i\pm(9-7i)}{2} = 4+2i;-5-5i$$
+\section{}
+$$z = \sqrt[4]{-\frac{169}{2}-\frac{169\sqrt3}{2}i} =  \sqrt{13}\sqrt[4]{-\frac{1}{2}-\frac{\sqrt3}{2}i}$$
+$$|z| = 1, \cos{\phi} = -\frac12, \sin{\phi} = -\frac{\sqrt3}{2} \to \phi = \frac{4\pi+2\pi k}{3},k \in \{0,1,2,3\}$$
+$$z_1 = \sqrt{13}\cdot(\cos{ \frac{\pi}{3}} +i\sin{ \frac{\pi}{3}})$$
+$$z_2 = \sqrt{13}\cdot(\cos{ \frac{5\pi}{6}} +i\sin{\frac{5\pi}{6}})$$
+$$z_3 = \sqrt{13}\cdot(\cos{ \frac{4\pi}{3}} +i\sin{\frac{4\pi}{3}})$$
+$$z_2 = \sqrt{13}\cdot(\cos{ \frac{11\pi}{6}} +i\sin{\frac{11\pi}{6}})$$
+\section{}
+$$\begin{pmatrix}
+	-2 & 5 & -2 & -1 & 2 \\
+	16 & -47 & 15 & 19 & -11 \\
+	16 & -\frac{-106}{3} & \frac{50}{3} & a & -\frac{115}{6}
+\end{pmatrix} \xrightarrow{\text{СВ}} \begin{pmatrix}
+-2 & 5 & -2 & -1 & 2 \\
+0 & -7 & -1 & 11 & 5 \\
+0 & 0 & 0 & a-112/3 & \frac{1}{6} 
+\end{pmatrix}\to \text{При любых значениях а три главных неизвестных и система линейно независима. Дополним систему до базиса} $$
+$$\begin{pmatrix}
+	-2 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+	5 & -7 & 0 & 0 & 1 & 0 & 0 & 0 \\
+	-2 & -1 & 0 & 0 & 0 & 1 & 0 & 0\\
+	-1 & -11 & a-112/3 & 0 & 0 & 0 & 1 & 0\\
+	2 & 6 & 1/6 & 0 & 0 & 0 & 0 & 1\\
+\end{pmatrix} \xrightarrow{\text{СВ}}$$
+$$\begin{pmatrix}
+	-2 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+	0 & -7 & 0 & 5/2 & 1 & 0 & 0 & 0 \\
+	0 & 0 & \frac16 & \frac{39}{14} & \frac57 & 0 & 0 & 1\\
+	0 & 0 & 0 & -\frac{19}{14} & -\frac17 & 1 & 0 & 0\\
+	0 & 0 &   0 & 0 & \frac{-48a+1771}{19} & \frac{-234a+8674}{19} & 1&-6a+224\\
+\end{pmatrix}$$
+Базисом будут первые три вектора, 7 вектор и последний, если -6а+224 =0, четвертый иначе 
+\section{}
+\subsection*{а)}
+$$\begin{pmatrix}
+	-14 & -25 & -9 & -19 \\
+	-28 & -28 & -12 & -32 \\
+	-23 & 	-22 & -10 & -25 \\
+	-21 & -21 & -9 &  -24 \\
+	-15 & -9 & -5 & -15  
+\end{pmatrix}\xrightarrow{\text{СВ}}
+\begin{pmatrix}
+	
+	-14 & -25 & -9 & -19 \\
+	0 & 22 & 6 & 6 \\
+	0 & 0 & \frac{-32}{77} & \frac{78}{77} \\
+	0 & 0 & 0 &  0 \\
+	0& 0 & 0 & 0  
+	\end{pmatrix}$$
+	Первые три вектора образуют базис подпространства $U$\\
+	\subsection*{б)}
+	Решим уравнение $\alpha_1\cdot v_1+ \alpha_2 \cdot v_2 + \alpha_3\cdot v_3 = u_1$ \\
+	$$\begin{pmatrix}
+		-14 & -25 & -9 & | &23\\
+		-28 & -28 & -12 & | & 28 \\
+		-23 & -22 & -10 & | & 20 \\
+		-21 & -21 & -9 &  | & 21 \\
+		-15 & -9 & -5 & | &9  
+	\end{pmatrix}\xrightarrow{\text{СВ}}\begin{pmatrix}
+
+	-14 & -25 & -9 & -19 \\
+	0 & 22 & 6 & -18 \\
+	0 & 0 & \frac{-32}{77} & -\frac{24}{11} \\
+	0 & 0 & 0 &  0 \\
+	0& 0 & 0 & 0  
+	\end{pmatrix}\xrightarrow{\text{УСВ}}\begin{pmatrix}
+		1 & 0 & 0 & \frac{208}{77}\\
+		0 & 1 & 0 & -\frac{45}{44} \\
+		0 & 0 & 1 & \frac34 \\
+		0 & 0 & 0 & 0 \\
+		0 & 0 & 0 & 0
+	\end{pmatrix}$$
+	$$\alpha_1,\alpha_2,\alpha_3 = \frac{208}{77}, -\frac{45}{44},\frac34$$ 
+	Решим уравнение $\alpha_1\cdot v_1+ \alpha_2 \cdot v_2 + \alpha_3\cdot v_3 = u_2$ \\
+	$$\begin{pmatrix}
+		-14 & -25 & -9 & | &74\\
+		-28 & -28 & -12 & | & 81 \\
+		-23 & -22 & -10 & | & 74 \\
+		-21 & -21 & -9 &  | & 61 \\
+		-15 & -9 & -5 & | &31
+		\end{pmatrix}\xrightarrow{\text{СВ}} \begin{pmatrix}
+		-14 & -25 & -9 & 74 \\
+		0 & 22 & 6 & -67 \\
+		0 & 0 &\frac{-32}{77} &\frac{3237}{308} \\
+		0 & 0 & 0 & \frac14 \\
+		0 & 0 & 0 & 0
+		\end{pmatrix}$$ 
+		Система несовместна  $\to u_2 \notin U$
+	\section{}
+	$$\begin{pmatrix}
+		-9 & -7 & -3 & -1 & -18 & 0 \\
+		-5 & -2 & -1 & -1 & -11 & 0 \\
+		-9 & 0 & -1 & -7 & -25 & 0 \\
+		-10	&-6&	-2&	 5&	-16&	0
+	\end{pmatrix}\xrightarrow{\text{УСВ}}
+	\begin{pmatrix}
+	1 &  0 & 0 & -\frac14 & 2 & 0 \\
+	0 & 1 & 0 & -\frac72 & -3 & 0 \\
+	0 & 0 & 1 & \frac{37}{4} & 7 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0
+	\end{pmatrix}$$
+	Решения системы $x_1 = \frac14x_4 - 2x_5, x_2 = \frac72x_4-3x_5,x_3 = -\frac{37}{4}x_4-7x_5$. Базисом являются $\begin{pmatrix}
+		\frac14 \\ \frac72 \\ \frac{-37}{4} \\1 \\0 
+	\end{pmatrix}, \begin{pmatrix}
+	-2 \\ -3 \\-7 \\ 0 \\1
+	\end{pmatrix}$(используя ФСР). Размерность -2 
+\end{document}

@@ -1,0 +1,27 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1)}
+	$$F = \QQ[z]/(z^3-z^2+1)- \text{ поле} \iff f(\pm1)\ne0$$
+	$$f(1) = 1, f(-1) = -1$$
+	Значит F - поле.
+	$$F =\{ a\alpha^2+ b\alpha+c, a,b,c\in
+	\QQ \} \alpha - \text{ представитель класса z}$$
+	$$\frac{3\alpha^2-12\alpha+7}{\alpha^2-3\alpha+1} = a\alpha^2+b\alpha+c\iff 3\alpha^2-12\alpha+7 = (\alpha^2-3\alpha+1)(a\alpha^2+b\alpha+c)(*)$$
+	В нашем поле выполнено $a^3-a^2+1\equiv 0\iff a^3 = a^2-1$,\\$a^4 = a\cdot a^3 = a^2-a-1$\\
+	$$(*)\to \begin{cases}
+		3 = -a-2b+c\\
+		-12 = -a+b-3c\\
+		7=-2a-b+c 
+	\end{cases}\to \begin{cases}
+	a = -\frac{17}{9}\\
+	b = \frac{19}{9}\\
+	c = \frac{16}{3}
+	\end{cases}$$
+	$$\frac{3\alpha^2-12\alpha+7}{\alpha^2-3\alpha+1} = \frac{-17}{9}\alpha^2+\frac{19}{9}\alpha + \frac{16}{3}$$
+	\section*{2}
+	$$x^4_2x^6_3+2x_1+x_2^4x_3+x_1^2+x^{2}_{2}\quad \overrightarrow{-x_1} \quad x_2^4x^6_3+x_1x_2^4x_3\quad \overrightarrow{-x_1}\quad x_2^4x_3^6+x_1^2x_2^2\quad\overrightarrow{-1}\quad 2x_1x_2x^2_3-\text{  остаток}$$
+	\section*{4}
+Пусть $F$ - система Гребнера. Тогда для любых $f_1,f_2 \in F, (f_1,f_2) \in F$. Тогда $(f_1, 0) \in F$ Следовательно, любой многочлен из F делит $f_1$\\
+В обратную сторону\\
+Пусть f - многочлен, который делит любой многочлен из F. Тогда $\forall f_1, f_2 \in F (f_1,f_2)\in F$ и делится на f. Следовательно, F- система Гребнера. 
+\end{document}

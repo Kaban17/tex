@@ -1,0 +1,35 @@
+\input{preambula.tex}
+\begin{document}
+\section*{1}
+ 	$$H \vartriangleleft G\iff \forall g\in G \colon gHg^{-1}\subseteq H$$
+ 	$$g = \begin{pmatrix}a & 0 \\b & c\end{pmatrix}, g^{-1}=  \begin{pmatrix}\frac1a & 0 \\\frac{b}{-ac} & \frac1c\end{pmatrix}$$
+ 	$$g\cdot\begin{pmatrix}
+ 		x^3 & 0 \\
+ 		y & x^2
+ 	\end{pmatrix}\cdot g^{-1}=\begin{pmatrix}
+ 	x^3 & 0 \\
+ 	bx^3\dots & x^2
+ 	\end{pmatrix} \in H $$
+ 	Значит $H \vartriangleleft G$
+ 	\section*{2}
+ 	$$G= \ZZ_{20}, H=\ZZ_{16}$$
+ 	$$\varphi(n) = n\cdot\varphi(1)$$
+ 	Гомоморфизм однозначно определяется тем, куда переходит 1.
+ 	$$20\cdot\varphi(1_{20}) \equiv 0\pmod {16}$$
+ 	$$\varphi(1_{20}) \equiv 0\pmod {4}$$
+ 	$$\varphi(1_{20}) \in \left\{0, 4, 8, 12\right\}$$
+ 	\section*{3}
+ 	$$H = \left\{e^{(i\pi)^{2t}}\colon t\in \QQ\right\}$$
+ 	$$\varphi \colon \QQ\to H$$
+ 	$$\varphi(q) =e^{(i\pi)^{2q}} $$
+ 	$$\varphi(q_1+q_2) = e^{(i\pi)^{2(q_1+q_2)}} =e^{(i\pi)^{2q_1}}\cdot e^{(i\pi)^{2q_2}} = \varphi(q_1)\cdot\varphi(q_2) \varphi\text{ - гомоморфизм.}$$
+ 	Очевидно, что $\varphi(q) = 1\iff q\in\ZZ$
+ 	$$\ker\varphi = \left\{t\in \ZZ\colon e^{(i\pi)^{2t}}\right\}=  \ZZ$$ 
+ 	По теореме о гомоморфизме для групп: $$Q\backslash \ZZ =Q\backslash \ker\varphi  \cong  \text{Im}\varphi = H \blacksquare$$
+ 	\section*{4}
+ 	$$1)\to 2) \iff \neg2)\to \neg1)$$
+ 	$$A\cap B \text{ - подгруппа в }G \text{ и следовательно в ней есть еще элементы, помимо e. Пусть этот элемент g}$$
+ 	$$\text{ord}g = k >1\overset{\text{ по т. Лагранжа}}{\to} k\vdots m, n \to (m,n)\ne 1$$
+  В другую сторону это неверно, легко привести контрпример. Возьмем $\ZZ_5 = (0, 1, 2, 3, 4)$ и подгруппу $Z_2, Z_3 = (0,1), (0, 1, 2 )$
+  $$\ZZ_2\cap\ZZ_3 = (0,1)\ne \left\{1\right\} $$
+\end{document}

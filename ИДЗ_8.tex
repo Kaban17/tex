@@ -1,0 +1,63 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+
+	$$\begin{pmatrix}
+		-4 & 1 & 0 & 0 \\
+		-9& 0 & 1 & 0 \\
+		-6& 0 & 0 & 1 \\
+		6 & 0 & 0 & 1
+	\end{pmatrix} \text { - набор ЛНЗ векторов и следовательо базис } \RR^4$$
+	Воспользуемся методом ортогонализации Грама-Шмидта и сразу нормируем базис. 
+	$$b_1 = a_1$$
+	$$b_2 = a_2 - \frac{(a_2,b_1)}{(b_1, b_1)}\cdot b_1 = \begin{pmatrix}\frac{3\sqrt{17}}{13}\\
+	\frac{-12}{\sqrt{17}13}\\
+	-\frac{8}{\sqrt{17}13} \\
+	\frac{8}{\sqrt{17}13}
+	\end{pmatrix}$$
+	$$b_3 =a_3 - \frac{(a_3,b_2)}{(b_2, b_2)}\cdot b_2 = 
+	\begin{pmatrix}
+		0\\
+		2\sqrt{\frac{2}{17}}\\
+		-\frac{3}{\sqrt{34}} \\
+			\frac{3}{\sqrt{34}}
+			
+	\end{pmatrix} $$
+	$$b_4 =a_4 - \frac{(a_4,b_3)}{(b_3, b_3)}\cdot b_3 = 
+\begin{pmatrix}
+0 \\
+0 \\
+\frac{1}{\sqrt2}\\
+\frac{1}{\sqrt2}\\
+\end{pmatrix} $$
+\section*{2}
+$$\begin{pmatrix}2 & 1 & 1 & -2 \\
+	-1 & 4 & 4 & 1 
+\end{pmatrix}\to\begin{pmatrix}1 & 0 & 0 & -1 \\
+0& 1 &  1&0 
+\end{pmatrix}$$
+$$\text{ ФСР: }\begin{pmatrix}0 & -1 & 1 & 0 \\
+	1& 0 &  0&1 
+\end{pmatrix} $$
+$$\text{pr}_Uv = \text{ сумма проекций на базисные векторы} = -2b_1 -3b_2 = \begin{pmatrix}-3 \\ 2\\ -2 \\-3 \end{pmatrix}$$
+$$\text{ort}_Uv = \begin{pmatrix}-1 \\ 2\\ 2 \\1 \end{pmatrix}$$
+$$\rho(V, U) = \sqrt{|ort_Uv|} = \sqrt{10}$$
+\section*{4}
+$$\det A = 5$$
+Найдем $a_1, a_2, a_3: -3+3x-4x^2 = a_1(-4+5x-x^2)+ a_2(16-18x+3x^2) +a_3(8-14x+3x^2)$
+Составим и СЛУ и решим его. $a_1 = 72/2, a_2 = 55/8, 29/8$\\
+Аналогично и для других векторов. 
+$a_1 = 87/2, 59/8, 49/8$\\
+$a_1 = -82, -65/4, -31/4$\\
+$$\det(a_1\frac{71}{2} + a_2\frac{55}{8} +a_3\frac{29}{8} |a_1\frac{87}{2} + a_2\frac{59}{8} +a_3\frac{49}{8}| -82a_1 + a_2\frac{-65}{4} +a_3\frac{-31}{4} ) = $$
+$$\det(a_1\frac{71}{2}| a_2\frac{59}{8} |a_3\frac{-31}{4} ) +\det( a_2\frac{55}{8}| a_1\frac{87}{2}| a_2\frac{-65}{4} ) +  \det( a_3\frac{29}{8} |a_3\frac{49}{8}| -82a_1  ) = -\frac{5\cdot71\cdot59\cdot31}{64} $$
+\section*{5}
+Вычтем из каждого точки $v_i$ точку $v_0$, чтобы получилось подпространоство и также из точки $v$. И найдем проекцию получившейся точки на получившееся подпространство. \\
+$$\text{pr}_{L'}v^{'} = \text{сумма проекция на каждый из векторов. } = \frac{80}{179}\begin{pmatrix}1\\7\\ -8\\ -4\\ 7\\\end{pmatrix} + \frac{85}{115}\begin{pmatrix}-4\\-7\\ 0\\ -1\\ 7\\\end{pmatrix} + \frac{105}{115}\begin{pmatrix}-7\\1\\ 0\\ -7\\ 4\\\end{pmatrix} =  $$
+$$=\begin{pmatrix}-\frac{31633}{4117}\\-\frac{5378}{4117}\\ -\frac{640}{179}\\ -\frac{31704}{4117}\\ -\frac{46353}{4117}\\\end{pmatrix}$$
+Так как $\text{pr}_{L'}v^{'}$ лежит в $L'$, то ближайшая точка к $v'$ будет $\text{pr}_{L'}v^{'}$ \\
+Осталось добавить только вычтенный вектор. \\
+$$\begin{pmatrix}-\frac{31633}{4117}\\-\frac{5378}{4117}\\ -\frac{640}{179}\\ -\frac{31704}{4117}\\ -\frac{46353}{4117}\\\end{pmatrix} + \begin{pmatrix}2 \\ 3 \\8 \\-7 \\-6\end{pmatrix}$$
+ Расстояние от точки до точки не изменится. 
+$$\rho(v', \text{pr}_{L'}v^{'}) = \sqrt{\sum_{i=1}^5 (v'_i, \text{pr}_{L'_i}v^{'})^2}$$
+\end{document}

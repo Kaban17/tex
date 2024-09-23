@@ -1,0 +1,69 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	\subsection*{а)}
+	$$a = p_1^{\alpha_1}\cdot\dots \cdotp_s^{\alpha_s}$$
+	$$b = p_1^{\beta_1}\cdot\dots\cdot p_s^{\beta_s}$$
+	$$(a,b) = p_1^{min(\alpha_1,\beta_1 ) }\cdot \dots\cdotp_1^{min(\alpha_s,\beta_s ) }$$
+	$$(a+b, [a,b]) = (a+b, p_1^{max(\alpha_1,\beta_1 ) }\cdot \dots\cdotp_1^{max(\alpha_s,\beta_s ) })$$
+	Из суммы $ a+b $ можно повыносить минимальные степени каждого $p_i$ и выражение примет вид: $p_1^{min(\alpha_1,\beta_1 ) }\cdot \dots\cdot p_1^{min(\alpha_s,\beta_s ) }\cdot (p_1^{max(\alpha_1, \alpha_1-\beta_1)} \cdots)$ \\
+	$$(p_1^{min(\alpha_1,\beta_1 ) }\cdot \dots\cdot p_1^{min(\alpha_s,\beta_s ) }\cdot (p_1^{max(\alpha_1, \alpha_1-\beta_1)} \cdots), p_1^{max(\alpha_1,\beta_1 ) }\cdot \dots\cdotp_1^{max(\alpha_s,\beta_s ) }) =p_1^{min(\alpha_1,\beta_1 ) }\cdot \dots\cdotp_1^{min(\alpha_s,\beta_s ) } $$
+	\subsection*{б)}
+	$$a = p_1^{\alpha_1}\cdot\dots \cdotp_s^{\alpha_s}$$
+$$b = p_1^{\beta_1}\cdot\dots\cdot p_s^{\beta_s}$$
+$$c = p_1^{\gamma_1}\cdot\dots\cdot p_s^{\gamma_s}$$
+$$(a,b,c) = ((a,b),c) = p_1^{min(\alpha_1,\beta_1,\gamma_1 ) }\cdot \dots\cdotp_1^{min(\alpha_s,\beta_s,\gamma_s ) }$$
+Без ограничение общности будем считать, что $\alpha_i \leqslant \beta_i \leqslant \gamma_i \quad \forall i$ \\
+$$\frac{(a,b) (b,c)(c,a)}{(a,b,c)^2} = \frac{ p_1^{min(\alpha_1,\beta_1 ) }\cdot \dots\cdot p_1^{min(\alpha_s,\beta_s ) }\cdot p_1^{min(\gamma_1,\beta_1 ) }\cdot \dots\cdotp_1^{min(\gamma_s,\beta_s ) }\cdot  p_1^{min(\alpha_1,\gamma_1 ) }\cdot \dots\cdot p_1^{min(\alpha_s,\gamma_s ) }}{p_1^{2min(\alpha_1,\beta_1,\gamma_1 ) }\cdot \dots\cdot p_1^{2min(\alpha_s,\beta_s,\gamma_s ) }}$$ $$= p_1^{\beta_1}\dots p_s^{\beta_s}$$
+$$\frac{[a,b][b,c][c,a]}{[a,b,c]} = \frac{p_1^{\beta_1}\cdots p_s^{\beta_s}p_1^{\gamma_1}\cdots p_s^{\gamma_s} p_1^{\gamma_1}\cdots p_s^{\gamma_s} }{p_1^{2\gamma_1}\cdots p_s^{2\gamma_s}}  =  p_1^{\beta_1}\dots p_s^{\beta_s} \blacksquare$$
+\section*{2)}
+Так как чисел, кратных 2 больше, чем чисел кратных 5, то нам надо посчитать количество чисел, кратных 5. 
+Посчитаем количество чисел, кратных 5: $1000/5 = 200$ \\
+Чисел, кратных 25: $1000/25 = 40$  \\
+Чисел, кратных 125: $1000/125 = 8$
+Чисел кратных 625 : $1$. \\
+Каждая степень 5 дает свой ноль на конец числа. Следовательно нулей 249. в интервале от 1 до 1000 - 1000/5 = 200. 
+- чисел, кратных 25 1000/25 
+\section*{3}
+$$n = p_1^{\alpha_1}\cdot\dots \cdot p_s^{\alpha_s} $$
+Сумму всех делителей числа n можно предствить так: $$\sum_{b_i = 0, \cdots \alpha_i} p_1^{b_1}\cdots p_s^{b_s}$$
+Раскрыв эту сумму, получим выражение 
+$$(1+p_1 + \dots + p_1^{\alpha_1})\dots(1+p_s + \dots + p_s^{\alpha_s}) = \frac{p_1^{\alpha_1+1}-1}{p_1-1}\dots \frac{p_s^{\alpha_s+1}-1}{p_s-1} \blacksquare$$ 
+\section*{4)}
+$108 = 2^2 \cdot 3^3$\\
+$\sigma(108) = \frac{2^3-1}{1}\frac{3^4-1}{2} = 2^3\cdot5\cdot7$\\
+$\mathcal{T}(2^3\cdot5\cdot7 ) = 16$
+\section*{5}
+\subsection*{a)}
+$$19x+88y = 2$$
+88 = 4*19 + 12 \\
+19 = 12 +  7 \\ 
+12 = 7+5  \\
+7 = 5 + 2 \\
+2 = 7-5 = (19-12)- (12-7) = (19 - (88-4*19)) - (88-4*19-5*19) = -3*88 + 14*19  \\
+частное решение $x = 14, y = -3$
+$$\begin{cases}19x+88y = 2 \\
+19*14-3*88 = 2\end{cases}$$
+$$19(x-14)+ 88(y+3) = 0$$
+$$x = 88t+14, t \in \ZZ$$
+$$y = 19t-3$$
+\section*{б)}
+$$102x+165y = 9$$
+$$34x+55y = 3$$
+55  =34+21 \\
+34  =21+13 \\
+21 = 13+ 8\\
+13 = 8 + 5\\
+8  = 5+ 3 \\
+3 = -8*34+5*55\\
+$$x = -8, y = 5 \text{- частное решение.}$$
+$$\begin{cases}
+	34x+55y = 3 \\
+	-8*34 + 5*55 = 3 
+\end{cases}$$
+$$34(x+8)+55(y-5) = 0$$
+$$\begin{cases}
+	x = 55t-8 \\
+	y = -34t+5
+	\end{cases}, t\in \ZZ$$
+\end{document}

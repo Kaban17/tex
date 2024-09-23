@@ -1,0 +1,56 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	Это неверно. Вот контрпример. Треугольник со сторонами 6,7, 8. Для него выполнятеся неравенство треугольника, но произведение его сторон не делится на 60.
+	\section*{2}
+	\subsection*{a)}
+		$$19x \equiv 2( mod 88)$$
+		$$88 = 19\cdot4 + 12 $$
+		$$19 = 12+7$$ 
+		$$7 = 5 + 2 $$
+		$$2 = 14\cdot19 - 3\cdot88$$
+		$$\begin{cases}
+			19x+88y = 2 \\
+			19\cdot14-88\cdot3 = 2 \\
+		\end{cases}\to 19(x-14) + 88(y+3) = 0$$
+		$$x \equiv 14 (mod 88)$$
+		\subsection*{b)}
+				$$102x \equiv 9( mod 165)$$
+				$$34x \equiv 3(mod 55)$$
+	$$55 = 34 + 21 $$
+	$$34 = 21+13$$
+	$$21 = 13+ 8$$
+	$$13 = 8 + 5$$
+	$$3 = 5\cdot55 - 3\cdot 34$$
+	$$\begin{cases}3 = 5\cdot55 - 3\cdot 34\\
+	34x + 55y= 3\end{cases}\to 55(y-5) +34(x+8) = 0\to x \equiv = 47(mod 55)$$
+	\section*{3}
+	$$5^{p^2} \equiv1(mod p)$$
+	$$5^{p-1} \equiv1(mod p)$$
+	$$ 5^{p-1}\equiv5^{p^2} \equiv1(mod p)$$
+	 Заметим, что 2 - решение.
+	 Докажем, что других решений нет
+	$$p-1\equiv  p^2 (mod p-1)\text{У этого уравнения нет решений . }$$
+\section*{4}
+$$a^{14} \equiv 1(mod15)$$
+Чтобы найти все псевдопростые числа, нам достаточно рассмотреть a от 1 до 7. Так как степень четная, то дальше все числа повторяются. 
+$$a = 1, a^{14} \equiv1 (mod15)$$
+$$2^{14} = 2^6\cdot 2^6 \cdot 2^2 \equiv4 (mod15)$$
+$$3^{14} = 3^6\cdot 3^6\cdot 3^2 =\equiv 6\cdot9 \equiv9(mod 15)$$
+$$4^{14} = 4^2\cdot 4^2 \dots 4^2 \equiv 1 (mod15)$$
+$$5^{14} = 5^2 \dots 5^2 \equiv 700\equiv \equiv mod 15$$
+$$6^{14} = 6^2\dots 6^2 \equiv 6^7\equiv6^4\equiv6 (mod15)$$
+$$7^{14} = 7^2 \dots 7^2 \equiv 4^7\equiv4^6\cdot 4 \equiv 4(mod 15)$$
+Значит, все числа такого вида будут псевдопростыми: $15t + 1, 15n-1, 15m+4,15k-4$, где $m,n,k,t \in \NN$
+\section*{5}
+$$\begin{cases}
+	x\equiv 2(mod 11)\\
+	x\equiv1 (mod13)
+\end{cases}$$
+$$11x+13y = 1$$
+$$13 = 11+ 2  = 2\cdot5+ 1+ 2$$
+$$1 = 11\cdot6 - 13\cdot5$$
+$$x =  11\cdot5 -13\cdot2\cdot5\text{ удовлетворяет обоим равенствам}$$ 
+Общее решение $x\equiv 68(mod11\cdot13)$
+
+\end{document}

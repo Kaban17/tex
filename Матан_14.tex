@@ -1,0 +1,65 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	Так как неопределенный интеграл это множество всех перврообразны, отличающихся на константу, то первое и последнее равенство неверные. \\
+	$$C = \int\frac{1}{x}dx - \int\frac{1}{x}dx =\int\frac{1}{x}dx - \left(x\cdot \frac1x+ \int x\cdot\frac{1}{x^2}\right) = C $$
+	\section*{2)}
+	\subsection*{a)}
+	$$C_1 = \arcsin(x) + \arccos(x) ,\quad x \in [-1,1]$$
+	$$\begin{cases*}\arcsin^{'} = \frac{1}{\sqrt{1-x^2}}\\
+	-\arccos^{'} =\frac{1}{\sqrt{1-x^2}} \end{cases*}\to \text{ они являются первообразными одной и той же функции. }$$
+	Вычислим значение в точке 0 :
+	$\arcsin(0) + \arccos(0) = \frac{\pi}{2}$
+	\subsection*{б)}
+	\section*{3}
+	\subsection*{a)}
+	$$\int \frac{1}{x^4-1}dx = \int\frac{1}{4(x-1)}dx+ \int - \frac{1}{4(x+1)} + \int-\frac{1}{2(x^2+1)}dx = \frac14\ln{|x-1|} - \frac14\ln{|x+1|} - \arctg x+ C$$
+	\subsection*{b)}
+	$$\int\frac{1}{\sqrt{-8-12x-4x^2}}\dx =\begin{pmatrix}
+		t = 2x+3 \\
+		2\dx =\d{dt}
+		 
+	\end{pmatrix} = \frac12\int\frac{1}{\sqrt{1-t^2}}\dx = \frac12\arcsin t + C  = \frac12\arcsin {(2x+3)} + C $$
+	\subsection*{c)}
+	 $$\int\frac{1}{sinx}\dx = \int\frac{\sin x}{\sin^2{x}} = \int\frac{\sin x}{1-\cos^2x} = \begin{pmatrix*}[c \cos x = t \\
+	 	x = \arccos t\\
+	 	\dx = \frac{-1}{\sqrt{1-t^2}}\d{dt}]\end{pmatrix*}= -\int\frac{\sqrt{1-t^2}}{1-t^2}\cdot\frac{1}{\sqrt{1-t^2}}\d{dt} =$$ $$= \frac12 \cdot \ln{\frac{1+\cos x}{1- \cos x}}+ C$$
+	 	\subsection*{d)}
+	 	$$I = \int\sqrt{a^2+x^2}\dx = x\sqrt{x^2+a^2}-\int\frac{x^2}{\sqrt{x^2+a^2}}\dx$$
+	 	$$\int\frac{x^2}{\sqrt{x^2+a^2}}\dx = \int\frac{x^2+a^2-a^2}{\sqrt{a^2+x^2}}\dx = I -a^2\int\frac{1}{\sqrt{x^2+a^2}}\dx $$
+	 	$$I = x\sqrt{x^2+a^2}-I +a^2\int\frac{1}{\sqrt{x^2+a^2}}\dx  $$
+	 	$$I = \frac{1}{2}\cdot\left(x\sqrt{x^2+a^2} + a^2\ln{|x+\sqrt{x^2+a^2}|}\right)+C$$
+	 	\subsection*{e)}
+	 	$$\int\sin^5x\dx = \int \sin x\sin^4x = \int \sin x (1-\cos^2x)\dx  = \begin{bmatrix}\cos x = t \\
+	 	dt -\sin x \\
+	 	\dx = -\frac{\d{dt}}{\sin x}\end{bmatrix} = $$
+	 	$$\int (1-t^2)\d{dt} = -\frac{t^5}{5}+\frac{2t^3}{3}- t+ C = -\frac{\cos^5x}{5}+\frac{2\cos^3x}{3}- \cos x+ C $$
+	 	\subsection*{f)}
+	 	$$\int x^2\arccos x = \begin{bmatrix}
+	 		f(x) = x^2 \\
+	 		g(x) = \arccos x \\
+	 		F(x) = \frac{x^3}{3} \\
+	 		g^{'} = -\frac{1}{\sqrt{1-x^2}}
+	 	\end{bmatrix} = \frac{x^3}{3}\arccos x + \int\frac{x^3}{3}\cdot\frac{1}{\sqrt{1-x^2}}$$
+	 	$$\int\frac{x^3}{3}\cdot\frac{1}{\sqrt{1-x^2}} = \begin{bmatrix}
+	 		\sqrt{1-x^2} = t \\
+	 		x^2 = 1-t^2 \\
+	 		\dx = -\frac{t}{x}\d{dt}
+	 	\end{bmatrix} = -\int\frac{x^3}{3t}\cdot\frac{t}{x}\d{dt} = -\frac13\int{(1-t^2)\d{dt}} = \frac{t^3}{3}-\frac{t}{3}+ C = \frac{\sqrt{1-x^2}^3}{3}-\frac{\sqrt{1-x^2}}{3}+ C$$
+	 	$$\int x^2\arccos x = \frac{x^3}{3}\arccos x +\frac{\sqrt{1-x^2}^3}{3}-\frac{\sqrt{1-x^2}}{3}+ C $$
+	 	\subsection*{g)}
+	 	$$I  = \int\sin{(\ln x)}\dx = \begin{bmatrix}
+	 		f(x) = 1 \\
+	 		g(x) = \sin{(\ln x)} \\
+	 		F(x) = x \\
+	 		g^{'} = -\frac{\cos(\ln x)}{x}
+	 	\end{bmatrix} = x\cos{(\ln x)}-\int \cos{\ln x}\dx $$ 
+	 	$$\int \cos{\ln x}\dx = \begin{bmatrix}
+	 		f(x) = 1 \\
+	 		g(x) = \cos{(\ln x)} \\
+	 		F(x) = x \\
+	 		g^{'} = -\frac{\sin(\ln x)}{x}\end{bmatrix} = x\sin{(\ln x)} + I$$
+	 		$$I =  x\cos{(\ln x)} - x\sin{(\ln x)} - I$$
+	 		$$I = \frac{x\cos{(\ln x)} - x\sin{(\ln x)}}{2}$$
+	 		
+\end{document}

@@ -1,0 +1,48 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	$$x^{242}-1 \equiv 0 \pmod {286}\leftrightarrow \begin{cases}x^{242}-1 \equiv 0 \pmod {2} \\
+	x^{242}-1 \equiv 0 \pmod {11}\\
+	x^{242}-1 \equiv 0 \pmod {13}\end{cases}\leftrightarrow \begin{cases}x \equiv 1 \pmod {2} \\
+	x\equiv \pm1 \pmod {11}\\
+	x \equiv \pm1 \pmod {13}\end{cases} \leftrightarrow $$
+	$$\begin{cases}
+		x \equiv 1\pmod{286}(+1_{11}, +1_{13})\\
+		x\equiv 131 \pmod{286} (-1_{11}, +1_{13})\\
+		x\equiv 155 \pmod{286}(+1_{11}, -1_{13})\\
+		x\equiv 285 \pmod{286}(-1_{11}, -1_{13})
+	\end{cases}$$
+	\section*{2}
+	$$x^2-1\equiv0 \pmod{2^{10}\cdot3^{11}\cdot 5^{12}\cdot7^{13}}\leftrightarrow \begin{cases}x^2-1\equiv0 \pmod{{2^{10}\cdot3^{11}}}\\
+		x^2-1\equiv0 \pmod{{5^{12}\cdot7^{13}}}
+	\end{cases}\leftrightarrow$$
+	$$\begin{cases}(x-1)(x+1)\equiv0 \pmod{{2^{10}\cdot3^{11}}}\\
+		(x-1)(x+1)\equiv0\pmod{{5^{12}\cdot7^{13}}}
+	\end{cases} \leftrightarrow 
+	\begin{cases}
+		(x-1)(x+1)\equiv0 \pmod{{2^{10}}}\\
+		(x-1)(x+1)\equiv0 \pmod{{3^{11}}}\\
+		(x-1)(x+1)\equiv0\pmod{{5^{12}}}\\
+			(x-1)(x+1)\equiv0\pmod{{7^{13}}}\
+	\end{cases}$$ Как видно, эта система имеет 10 решений.
+	4 решения от первого уравнения(\textpm 1, \textpm 511), и по 2 решения от остальных уравнения(\textpm 1).
+	\section*{3}
+	$$x^2\equiv y^2 \pmod p \leftrightarrow (x-y)(x+y)\equiv 0 \pmod p$$
+	Для каждого $x $ у нас есть пара $(+y,-y)$, которая дает ответ. Так как $x $ пробегает полную систему вычетов, то всего $2p$, но ноль и минус ноль это одно и тоже, так что ответ $2p-1$
+	\section*{4}
+	$(x^2-ab)(x^2-bc)(x^2-ac)\equiv0 \pmod p$  \\
+	Рассмотрим символ Лежандра для каждой пары. Без ограничения общности рассмотрим только пару $ab$ \\
+	$$1) \left(\frac{ab}{p}\right) = 0 $$ То есть $p|ab$ и $x = 0$ - решение.\\
+	$$2) \left(\frac{ab}{p}\right) = 1$$ 
+	$ab - $ квадратичный вычет и есть решение, равное $\sqrt{ab} \in \ZZ$.  \\
+	$$3) \left(\frac{ab}{p}\right) = -1$$
+	В таком случае смотрим на пару, где символ Лежандра равен ноль или один. 
+	\section*{5}
+	\subsection*{a)}
+	$$\sum_{x = 0}^{58} \left(\frac{15x+79}{59}\right) = 0, $$
+	$59- $ простое число. 
+	\subsection*{б)}
+	$$\sum_{x = 0}^{57} \left(\frac{15x+79}{59}\right) = 0-1 = -1 \left(\frac{15\cdot58+79}{59}\right) $$
+	$$15\cdot58+79\equiv934\equiv49\pmod{59}$$
+	$$\left(\frac{49}{59}\right) =1 $$
+\end{document}

@@ -1,0 +1,37 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	$$\text{По теореме Вильсона мы имеем} \quad (p-1)! \equiv -1 (mod p), $$
+	$$(p-2)! c\dot -1 \equiv -1 (mod p) | \cdot(-1)$$
+	$$(p-2)! \equiv 1 (mod p)$$
+	\section*{2}
+	Для доказательства достаточно показать, что все числа $xn+ym$ различны. \\
+	Пусть нашлись такие числа $x_0\ne x1, y_0\ne y_1 $ что $x_0n + y_0 \equiv x_1n + y_1m(\mod mn)$
+	$$n(x_0-x_1) + m(y_0-y_0) \equiv 0(mod mn) \leftrightarrow x_0 -x_1 + y_0 -y_1 \equiv 0 (\mod mn)$$
+	Противоречие с тем, что у нас полная система вычетов. 
+	\section*{3}
+	$$x_0n + y_0 \equiv x_1n + y_1m\pmod {mn}$$
+		$$x_0-x_1 \equiv (y_0-y_1)\pmod {mn}$$
+$$x \text{ по } \pmod m \text{ имеет $\varphi(m)$ остатков.} $$
+$$y \text{ по } \pmod n\text{ имеет $\varphi(n)$ остатков.} $$
+$$x,y \text{ по } \pmod {mn} \text{ имеет } \varphi(m)\cdot \varphi(n) \text{ остатков}$$
+Покажем, что все числа вида $xn + ym $ взимнопросты с $mn$ \\
+$$(xn +ym, mn) = d \to d|mn $$
+Пусть, без ограничения общности $d|m$. Тогда $d|(xn+ym)$
+$\to d|x \to (x,m) = d$ Такое может быть, если $d =1$. В остальных случаях это неверно. \\
+$$\text{ Очевидно, что }x,y \text{ по } \pmod {mn} \text{ имеет } \varphi(m)\cdot \varphi(n)  = \varphi(mn)$$
+	\section*{4}
+	$$\begin{cases}
+		x \equiv 4(mod 15)\\
+		x \equiv -1 (mod 16)
+		x \equiv 11 (mod 17)
+	\end{cases}$$
+	$$x = 16t + 1 \to 16t-1 \equiv 4(mod 15)$$ \\
+	$$16t \equiv 5(mod 15)$$
+	$$t \equiv 5(mod 15) \to t = 15u+ 5$$
+	$$x = 16(15u+5) + 1 = 15\cdot16 u + 79$$
+	$$ 15\cdot16 u + 79 \equiv 11(mod 17)$$
+	$$16\cdot 15 \equiv 0 (mod 17)$$
+	$$u  = 17k$$
+	$$x = 15\cdot16\cdot17 + 79 \leftrightarrow x\equiv 79(mod 15\cdot 16\cdot 17)$$
+\end{document}

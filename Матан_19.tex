@@ -1,0 +1,23 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1)}
+	\subsection*{a)}
+	$$\int\limits_0^{+\infty}\frac{\cos{7x}}{\sqrt[3]{x^2+1}}\dx =\lim_{x\to+\infty}\frac{\sin{7x}}{7\sqrt[3]{x^2+1}}+\frac{2}{21}\int\limits_0^{+\infty}\frac{\cos{7x}\cdot x}{(x^2+1)\sqrt[3]{x^2+1}} \sim\int\limits_1^{+\infty}\frac{\cos{7x}\cdot x}{(x^2+1)\sqrt[3]{x^2+1}} $$
+	Возьмем $g(x) = \frac{1}{x^{5/3}}$. Эта функция $g(x)\ge f(x) = \frac{\cos{7x}\cdot x}{(x^2+1)\sqrt[3]{x^2+1}} $\\
+	$$\int\limits_1^{+\infty} g(x)\dx \sim \int\limits_1^{+\infty}\frac{\cos{7x}\cdot x}{(x^2+1)\sqrt[3]{x^2+1}}$$
+	Интеграл справа сходтится $(\frac{5}{3}>1)$. Значит и интеграл слева сходится. 
+	\subsection*{б)}
+$$\int\limits_0^{+\infty} \frac{1}{\sqrt{e^x-1}}\dx = \int\limits_0^1\frac{1}{\sqrt{e^x-1}}\dx + \int\limits_1^{+\infty}\frac{1}{\sqrt{e^x-1}}\dx$$
+$$\lim_{x\to+\infty}\frac{x^2}{\sqrt{e^x-1}} = 0\to \frac{1}{\sqrt{e^x-1}}< \frac{1}{x^2} - \text{сходтися от единицы до бесконечности}$$
+$$g(x) = \frac{1}{\sqrt x}, \lim_{x\to\infty}\frac{f(x)}{g(x)} = 1$$
+$$g(x)\sim f(x)$$ 
+$g(x)$ сходитя от нуля до единицы, значит и $f(x)$
+сходится.
+\subsection*{c)}
+$$\int\limits_1^{+\infty}\ln{(1+\sin{\frac1x})}\dx$$
+$$\lim_{x\to\infty}\frac{\ln{(1+\sin{\frac1x})}}{x^{-1}} = 1$$
+$$\int\limits_1^{+\infty} \frac1x \text{- расходится, значит, и изначальный интеграл расходится}$$
+\section*{d)}
+$$\int\limits_0^{+\infty}\frac{\ln(1+x)}{x^a} =\int\limits_0^{1}\frac{\ln(1+x)}{x^a} + \int\limits_1^{+\infty}\frac{\ln(1+x)}{x^a} $$
+
+\end{document}

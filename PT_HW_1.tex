@@ -1,0 +1,85 @@
+\input{preambula.tex}
+\begin{document}	
+\begin{titlepage}
+
+	
+	\begin{center}
+		\textsc{\textbf{Теория веротностей, дз 1}}
+	\end{center}
+	
+	\vspace{6em}
+	
+	
+	
+	\newbox{\lbox}
+	\savebox{\lbox}{\hbox{Пупкин Иван Иванович}}
+	\newlength{\maxl}
+	\setlength{\maxl}{\wd\lbox}
+	\hfill\parbox{11cm}{
+		\hspace*{5cm}\hspace*{-5cm}Студент:\hfill\hbox to\maxl{Кондратьев Никита \hfill}\\
+		\hspace*{5cm}\hspace*{-5cm}Группа:\hfill\hbox to\maxl{238}\\
+		}
+	
+	
+	
+\end{titlepage}
+
+	\section*{1}
+	\subsection*{a)}
+	Всего есть 4 различных значения $N = \{0,1,2,3\}$. То есть Вася может решить либо ноль либо 1 либо 2 либо 3 задачи. \\
+	$P(0) = (1-0.1)\cdot(1-0.2)\cdot(1-0.3) = 0.504$ . Вася не решил ни первую, ни вторую, ни третью задачи. \\
+	$P(1) = 0.1\cdot(1-0.2)\cdot(1-0.3)+0.2\cdot(1-0.1)\cdot(1-0.3) + 0.3\cdot(1-0.1)\cdot(1-0.2) = 0.398 $ \\
+	$P(2) = 0.1\cdot0.2\cdot(1-0.3)+ 0.1\cdot(1-0.2)\cdot0.3+ (1-0.1)\cdot0.2\cdot0.3 =0.092$ \\
+	$P(3) = 0.1\cdot0.2\cdot0.3 = 0.006$
+	\subsection*{b)}
+		$$P(N>1) = P(N=2)+P(N=3) = 0.098$$
+		$$\E(N) = 0\cdot0.504+ 1\cdot0.398+2\cdot0.092+3\cdot0.006 = 0.6$$	
+		$$\E(N^2) = 0\cdot0.504+ 1^2\cdot0.398+ 4\cdot0.092+9\cdot0.006 =0.82 $$
+	\section*{2}
+	Если количество баллов случайная величина $\eps$ равновероятно распределенная на отрезке $\left[ 1,n\right] $, то $P(\eps) = \frac1n$ \\
+	$$\mathbb{E}(\varepsilon) = \frac{1}{n}\sum^n_{i=1}i = \frac{1}{n}\frac{n(n+1)}{2} = \frac{n+1}{2}$$
+	$$\mathbb{E}(\varepsilon^2) = \frac{1}{n}\sum^n_{i=1}i^2 = \frac{1}{n}\frac{n(n+1)(2n+1)}{6} = \frac{(n+1)(2n+1)}{6}$$
+	$$\mathbb{E}(\varepsilon) = \frac{1}{n}\sum^n_{i=1}i^3 = \frac{1}{n}\frac{n^2(n+1)^2}{4} = \frac{n(n+1)^2}{4}$$
+	\section*{3}
+	\href{https://pastebin.com/2Snuhsqt}{Решение задачи } \\
+	\textbf{Ответ: а) S = -1.833... г) не отвергам гипотезу	\documentclass[a4paper,12pt]{article}
+		\usepackage[utf8]{inputenc}
+		\usepackage[english,russian]{babel}
+		\usepackage[T2A]{fontenc}
+		\usepackage{mathtext}
+		\usepackage{gauss}
+		\usepackage{graphicx}
+		\usepackage{amsmath, amsfonts, amssymb}
+		\newtheorem{theorem}{Теорема}
+		\usepackage[left=2.50cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry} 
+		\usepackage{mathdots} 
+		\usepackage[pdftex]{lscape}
+		\usepackage{mathtools}
+		\usepackage{pgfplots}
+		\pgfplotsset{compat=1.9}
+		\usepackage{graphicx}%Вставка картинок правильная
+		\usepackage{tikz}
+		\usepackage{float}%"Плавающие" картинки
+		\usepackage{relsize}
+		\usepackage{wrapfig}%Обтекание фигур (таблиц, картинок и прочего)
+		\usepackage{ tipa }
+		\usepackage{amsmath}
+		\usepackage[unicode=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+		\linespread{1}
+		\newcommand{\om}{\overline{o}}
+		\newcommand{\OB}{\underline{O}}
+		\newcommand{\eps}{\varepsilon}
+		\newcommand{\RR}{\mathbb{R}}
+		\newcommand{\NN}{\mathbb{N}}
+		\newcommand{\CC}{\mathbb{C}}
+		\newcommand{\QQ}{\mathbb{Q}}
+		\newcommand{\ZZ}{\mathbb{Z}}
+		\newcommand{\dx}{\d{dx}}
+		\newcommand{\ph}{\varphi}
+		\newcommand{\F}{\mathbb{F}}
+		\newcommand{\E}{\mathbb{E}}
+		
+		\section*{1}
+		\textbf{Замкнутым брусокм } (промежуток , координатный промежуток в $\R^n$) будем называть множество $I= \{x\in \R^n | a_i \leq x_i|leqb_i, i=1\dots,n\}$
+	}
+\end{document}

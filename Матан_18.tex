@@ -1,0 +1,15 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{2}
+	\subsection*{a)}
+	$$\int_{-1}^{1}(1-t^2)^n \cos{(tx)\d{dt}} = \begin{bmatrix}
+		g^{'}(t) = -2nt(1-t^2)^{n-1}\\
+		F(t) = \frac{\sin tx}{x}
+	\end{bmatrix}= \frac{2n}{x}\int_{-1}^{1}\sin{(tx)}t(1-t^2)^{n-1}  $$
+	$$\int_{-1}^{1}\sin{(tx)}t(1-t^2)^{n-1} =\begin{bmatrix}
+		g^{'}(t) =(1-t^2)^{n-1} + (-2nt^2+2t^2) (1-t^2)^{n-2}\\
+		F(t) = \frac{\cos tx}{x}
+	\end{bmatrix}= $$
+	$$= \frac1x\int_{-1}^{1}\cos{(tx)}((1-t^2)^{n-1} + (-2nt^2+2t^2) (1-t^2)^{n-2}) = $$
+	$$=\int_{-1}^1\cos{(tx)}(1-t^2)^{n-1}\d{dt} -(2n-1)\int_{-1}^1\cos(tx)t^2(1-t^2)^{n-2}\d{dt}$$
+\end{document}

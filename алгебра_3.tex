@@ -1,0 +1,33 @@
+\input{preambula.tex}
+\begin{document}
+	\section*{1}
+	Найдем порядок каждого элемента в каждой группе прямого произведения
+	$$\ZZ_2: \text{ord}(0) = 0, \text{ord}(1) = 2$$
+	$$\ZZ_6: \text{ord}(0) = 0, \text{ord}(1) = 6, \text{ord}(2) = 3, \text{ord}(3) = 2, \text{ord}(4) = 3, \text{ord}(5) = 6$$
+$$\ZZ_9: \text{ord}(0) = 0, \text{ord}(1) = 9, \text{ord}(2) = 9, \text{ord}(3) = 6, \text{ord}(4) = 9, \text{ord}(5) = 9,\text{ord}(6) = 3,\text{ord}(7) = 9,\text{ord}(8) = 9 $$
+Воспользуемся фактом: $ord(a,b) = [ord(a),ord(b)]$\\
+НОК =2: 3 элементов  \\
+НОК =3: 4 элементов  \\
+НОК = 6: 5 элементов  \\
+НОК = 9: 12 элементов 
+\section*{2}
+$$G\cong  \ZZ_2\times\ZZ_5\times\ZZ_5\text{ нециклическая абелева группа}$$
+$$x = (a,b,c )$$
+$$5x = (0,0,0) = \begin{cases}5a = 0 - \text{ 1 решения }\\ 5b = 0 - \text{ 5 решений }\\
+	5c = 0 - \text{ 5 решений }
+\end{cases}  -\text{ всего 25-1 = 24 подгрупп(-1 т.к. x= 0, одно решение)}$$
+$$10x = (0,0,0) = \begin{cases}10a = 0 - \text{ 1 решения }\\ 10b = 0 - \text{ 5 решений }\\
+	10c = 0 - \text{ 5 решений }
+\end{cases}  -\text{ всего 50-2-24+1-1 = 24 подгрупп}$$
+вычитаем $2x=0, 5x=0, x = 0$
+\section*{3}
+$$ \ZZ_{2^33^3}\times\ZZ_{5^3}\cong\ZZ_{15}\times\ZZ_{36}\times\ZZ_{50} \ncong \ZZ_{2^33^35^3}$$
+Значит $\min n = 2$
+\section*{4}
+	$$k = \max ord$$
+	Пусть $\exists m\ne e: ord = m \text{и } (n,m) = 1 \to \exists p,q: pk+qm = 1$\\
+	$$a^{pk+qm} = a^{pk}\cdot a^{qm} = e$$
+	$$a^{pk+qm} = a^1 = a - \text{ Противоречие}$$
+
+	
+\end{document}
