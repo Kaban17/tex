@@ -1,0 +1,40 @@
+\input{preambula.tex}
+\begin{document}	
+	\begin{titlepage}
+		
+		
+		\begin{center}
+			\textsc{\textbf{Теория вероятностей, дз 2}}
+		\end{center}
+		
+		\vspace{6em}
+		
+		
+		
+		\newbox{\lbox}
+		\savebox{\lbox}{\hbox{Пупкин Иван Иванович}}
+		\newlength{\maxl}
+		\setlength{\maxl}{\wd\lbox}
+		\hfill\parbox{11cm}{
+			\hspace*{5cm}\hspace*{-5cm}Студент:\hfill\hbox to\maxl{Кондратьев Никита \hfill}\\
+			\hspace*{5cm}\hspace*{-5cm}Группа:\hfill\hbox to\maxl{238}\\
+		}
+		
+		
+		
+	\end{titlepage}
+	\section*{1}
+	Рассмотрим случайню величину $X_{T_i} = \begin{cases}
+		1, \text{ если } i, i+1, i+2 = THT\\
+		0,\text{ иначе }
+	\end{cases}$ \\
+	И величину $X_{H_i} = \begin{cases}
+		1, \text{ если } i, i+1, i+2\dots , i+5= HHHHHH\\
+		0,\text{ иначе }
+	\end{cases}$\\
+	Посчитаем вероятность того что $X_{T_i}=1$. Просто перемножим вероятности $P(X_{T_i}=1 ) = 0.2\cdot0.8\cdot0.2 = 0.032$ . По аналогии  $P(X_{H_i}=1 ) =0.262144 $\\
+	$$\mathbb{E}(X_{T_i}) =0.032,\mathbb{E}(X_{T_i}) =0.262144 $$
+	Пусть ожидаемый выигрыш равен $U$. Так как мы можем сделать либо +1 либо -1, то $U$ можно разложить так: $$U = \sum\limits_{i=1}^{98} \mathbb{E}(X_{T_i}) - \sum\limits_{i=1}^{95} \mathbb{E}(X_{H_i})  = 98\cdot0.032- 95\cdot 0.262144 =-21.76768$$
+	\section*{3}
+	\href{https://pastebin.com/AfR4trVC}{ссылка на код}
+\end{document}
